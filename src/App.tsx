@@ -129,14 +129,17 @@ export default function App() {
                   variants={fadeIn}
                   className="font-black text-white leading-[1.4] sm:leading-[1.2] mb-6 tracking-tight flex flex-col gap-2 sm:gap-4"
                 >
-                  <span className="whitespace-nowrap text-[min(6.5vw,2rem)] sm:text-5xl lg:text-[3.5rem] text-white">
-                    プロトタイプまで<span className={`${gradients.text}`}>最短即日。</span>
+                  <span className="whitespace-nowrap text-[min(6.5vw,2rem)] sm:text-5xl lg:text-[4rem] text-white">
+                    岐阜の<span className={`${gradients.text}`}>面白いAI専門家</span>が
                   </span>
-                  <span className="whitespace-nowrap text-[min(5.8vw,1.75rem)] sm:text-4xl lg:text-[3rem] text-slate-200">
-                    SE歴26年のアジャイル思考が、
+                  <span className="whitespace-nowrap text-[min(3vw,1rem)] sm:text-2xl lg:text-[1.8rem] text-slate-400 font-bold mb-2">
+                    プロトタイプまで最短即日。
                   </span>
-                  <span className="whitespace-nowrap text-[min(5vw,1.5rem)] sm:text-4xl lg:text-[3rem] text-slate-200">
-                    あなたのビジネスを<span className={`${gradients.text}`}>爆速で形にする。</span>
+                  <span className="whitespace-nowrap text-[min(5vw,1.5rem)] sm:text-4xl lg:text-[2.2rem] text-slate-300">
+                    AI導入支援×クリエイティブで
+                  </span>
+                  <span className="whitespace-nowrap text-[min(5.5vw,1.75rem)] sm:text-4xl lg:text-[3rem] text-slate-200">
+                    ビジネスを<span className={`${gradients.text}`}>爆速で形にする。</span>
                   </span>
                 </motion.h1>
                 
@@ -370,6 +373,7 @@ export default function App() {
                     <p className="text-slate-400 text-sm leading-relaxed mb-6">
                       通常であれば「Web制作会社」「映像制作会社」「デザイナー」に分散発注し、コミュニケーションコストとブランドの乖離が起きるプロジェクト。
                       ORCA LABではコンセプト設計からすべてのクリエイティブを一気通貫で担当し、圧倒的なスピードで形にします。
+                      この統合アプローチにより、クライアントの社内業務において<strong>90%の工数削減</strong>を達成。さらに高品質なクリエイティブの力で<strong>単価10万円アップ</strong>を実現させています。
                     </p>
                     <div className="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20">
                       <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-bold flex gap-3">
@@ -579,9 +583,9 @@ export default function App() {
                   className="flex-1 text-center md:text-left"
                 >
                   <h3 className="text-3xl sm:text-4xl font-black text-white mb-2 tracking-tight">シャチノリ</h3>
-                  <p className="inline-block px-3 py-1 bg-slate-800 rounded-md text-emerald-400 font-bold mb-6 text-sm tracking-wide">
-                    AIクリエイティブ・ディレクター / フルスタックSE
-                  </p>
+                  <h2 className="inline-block px-3 py-1 bg-slate-800 rounded-md text-emerald-400 font-bold mb-6 text-sm tracking-wide">
+                    IT解説が分かりやすい40代エンジニア / 面白いAI専門家
+                  </h2>
 
                   <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
                     <p>
@@ -591,7 +595,7 @@ export default function App() {
                       徹底したリスク管理と堅牢なプロジェクト推進力をベースに、AIを駆使したクリエイティブ制作を展開。自身の現場にAIを導入し<strong className="text-white font-bold bg-slate-800 px-1 rounded">工数を90%削減したノウハウ</strong>を持ち、デザイン・動画・Web開発を一人で統合的にコントロールする。
                     </p>
                     <p>
-                      <strong className="text-white font-bold bg-slate-800 px-1 rounded">「喋れるエンジニア」</strong>として、ナレーション提供実績80件超。さらに、フリーザの声真似主で<strong className="text-white font-bold bg-slate-800 px-1 rounded">「声真似」シャチノリ</strong>としての一面も持ち、YouTube登録者数2100人を超える発信力を併せ持つ。また、元ダンサーとしてTV番組や全国大会に出場した異色の経歴も。<strong className="text-white font-bold bg-slate-800 px-1 rounded">「技術力」と「表現力・人間力」の両輪</strong>で、クライアントの事業成長を多角的に牽引します。
+                      <strong className="text-white font-bold bg-slate-800 px-1 rounded">「喋れるエンジニア」</strong>として、ナレーション提供実績80件超。さらに、<strong className="text-white font-bold bg-slate-800 px-1 rounded">フリーザの声真似ができるエンジニア</strong>としてYouTube登録者数2100人を超える発信力を併せ持つ。また、元ダンサーとしてTV番組や全国大会に出場した異色の経歴も。「技術力」と「表現力・人間力」の両輪で、<strong className="text-white font-bold bg-slate-800 px-1 rounded">岐阜・各務原・名古屋</strong>をはじめ全国のクライアントの事業成長を牽引します。
                     </p>
                   </div>
 
@@ -632,6 +636,36 @@ export default function App() {
                   </div>
                 </motion.div>
               </div>
+
+              {/* YouTube Showcase Placeholder */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mt-16 w-full max-w-3xl mx-auto"
+              >
+                <div className="bg-slate-800/50 p-2 sm:p-3 rounded-3xl border border-slate-700/50 shadow-2xl relative">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-red-600 to-red-500 rounded-full text-xs font-bold text-white tracking-widest shadow-lg flex items-center gap-1.5 whitespace-nowrap">
+                    <Youtube className="w-3.5 h-3.5" />
+                    【参考動画】AI専門家の真の姿とは…!?
+                  </div>
+                  <div className="w-full aspect-video rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 mt-3 relative drop-shadow-2xl">
+                    <iframe 
+                      width="100%" 
+                      height="100%" 
+                      src="https://www.youtube.com/embed/Sridjx8x-Xk?autoplay=0&rel=0" 
+                      title="【フリーザ声真似】うっせぇわを宇宙の帝王が歌ったら" 
+                      frameBorder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                      referrerPolicy="strict-origin-when-cross-origin" 
+                      allowFullScreen
+                      className="absolute top-0 left-0 w-full h-full"
+                    ></iframe>
+                  </div>
+                </div>
+              </motion.div>
+
             </div>
           </div>
         </section>
@@ -668,6 +702,12 @@ export default function App() {
                     「事業を本気で前進させたい」「形にならない議論を終わらせたい」と考える経営者様からのご連絡をお待ちしております。
                   </p>
                 </div>
+              </div>
+
+              <div className="text-center mb-8">
+                <p className="text-emerald-300 font-bold text-sm sm:text-base bg-emerald-900/20 inline-block px-4 py-2 rounded-full border border-emerald-500/30">
+                  「まずはAIの雑談からでも構いません。ホッホッホ…」
+                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
@@ -710,6 +750,65 @@ export default function App() {
                 <div className="bg-white p-3 rounded-2xl shadow-lg">
                   <img src="https://qr-official.line.me/gs/M_vjq8895b_GW.png?oat_content=qr" alt="LINE公式アカウント QRコード" className="w-32 h-32 rounded-lg" />
                 </div>
+              </div>
+
+              {/* Media & Corporate Section */}
+              <div className="mt-16 pt-10 border-t border-slate-700/50 text-left">
+                <div className="flex items-center gap-3 mb-6 flex-wrap justify-center sm:justify-start">
+                  <div className="w-1.5 h-6 bg-purple-500 hidden sm:block"></div>
+                  <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">メディア関係者・法人様へ</h3>
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full border border-purple-500/30">
+                    企画立案に強い
+                  </span>
+                </div>
+                
+                <div className="bg-slate-900/80 p-5 sm:p-8 rounded-2xl border border-slate-700/80 mb-8 shadow-xl">
+                  <h4 className="text-emerald-400 font-bold mb-5 text-sm sm:text-base flex items-center gap-2">
+                    <Zap className="w-4 h-4" /> 対応可能なトークテーマ・課題解決
+                  </h4>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3 text-slate-300 text-sm sm:text-base leading-relaxed bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                      <div className="bg-slate-700 text-white rounded w-6 h-6 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">1</div>
+                      <div>
+                        <strong className="text-white block mb-1 text-base">AIの面白解説・エンタメ化</strong>
+                        専門用語を使わず、実例を交えて楽しく分かりやすく解説します。（フリーザ声真似での登壇・ナレーションも可能）
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3 text-slate-300 text-sm sm:text-base leading-relaxed bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                      <div className="bg-slate-700 text-white rounded w-6 h-6 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">2</div>
+                      <div>
+                        <strong className="text-white block mb-1 text-base">現場のエンジニア視点でのDX・AI活用</strong>
+                        実際の開発現場で「工数90%削減」を達成したリアルな裏側や、中小企業が陥りがちなDXの罠と成功法則の共有。
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3 text-slate-300 text-sm sm:text-base leading-relaxed bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                      <div className="bg-slate-700 text-white rounded w-6 h-6 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">3</div>
+                      <div>
+                        <strong className="text-white block mb-1 text-base">40代からのリスキリング戦略</strong>
+                        遅咲きでも結果を出す、実践的な学習法やマインドセット。キャリアの掛け合わせによる差別化戦略。
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                
+                <a 
+                  href="https://forms.gle/rMoeCbY4An1NfZ5b6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col sm:flex-row items-center justify-between w-full p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-600 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(168,85,247,0.2)] transition-all group gap-4 text-center sm:text-left touch-manipulation"
+                >
+                  <div>
+                    <span className="text-white font-black text-lg sm:text-xl block mb-1">
+                      📺 出演・取材・トークテーマの相談はこちら
+                    </span>
+                    <span className="text-slate-400 text-xs sm:text-sm">
+                      ※企画段階のご相談も歓迎です。Googleフォームよりお問い合わせください。
+                    </span>
+                  </div>
+                  <div className="bg-purple-600 group-hover:bg-purple-500 p-3 rounded-full text-white transition-colors shrink-0">
+                    <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </a>
               </div>
             </motion.div>
           </div>
