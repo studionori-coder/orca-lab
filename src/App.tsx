@@ -20,7 +20,9 @@ import {
   Briefcase,
   Infinity,
   Award,
-  ExternalLink
+  ExternalLink,
+  Youtube,
+  Instagram
 } from 'lucide-react';
 
 const gradients = {
@@ -568,19 +570,21 @@ export default function App() {
                       徹底したリスク管理と堅牢なプロジェクト推進力をベースに、AIを駆使したクリエイティブ制作を展開。自身の現場にAIを導入し<strong className="text-white font-bold bg-slate-800 px-1 rounded">工数を90%削減したノウハウ</strong>を持ち、デザイン・動画・Web開発を一人で統合的にコントロールする。
                     </p>
                     <p>
-                      <strong className="text-white font-bold bg-slate-800 px-1 rounded">「喋れるエンジニア」</strong>として、ナレーション提供実績80件超、YouTube登録者数2100人を超える発信力を併せ持つほか、元ダンサーとしてTV番組や全国大会に出場した異色の経歴も。<strong className="text-white font-bold bg-slate-800 px-1 rounded">「技術力」と「表現力・人間力」の両輪</strong>で、クライアントの事業成長を多角的に牽引します。
+                      <strong className="text-white font-bold bg-slate-800 px-1 rounded">「喋れるエンジニア」</strong>として、ナレーション提供実績80件超。さらに、フリーザの声真似主で<strong className="text-white font-bold bg-slate-800 px-1 rounded">「声真似」シャチノリ</strong>としての一面も持ち、YouTube登録者数2100人を超える発信力を併せ持つ。また、元ダンサーとしてTV番組や全国大会に出場した異色の経歴も。<strong className="text-white font-bold bg-slate-800 px-1 rounded">「技術力」と「表現力・人間力」の両輪</strong>で、クライアントの事業成長を多角的に牽引します。
                     </p>
                   </div>
 
                   <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
-                    {['システムエスカレーション対応 26年', 'AIワークフロー構築', 'UI/UXデザイン', '動画制作・ナレーション', 'YouTube 2100+', '元ダンサー（TV・全国大会出場）'].map((tag, i) => {
+                    {['システム対応 26年', 'AIワークフロー構築', 'UI/UXデザイン', '動画制作', '声真似主（フリーザ）', 'YouTube 2100+', '元ダンサー'].map((tag, i) => {
                       const colorVariants = [
                         "bg-purple-500/10 text-purple-400 border-purple-500/30",
                         "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
                         "bg-blue-500/10 text-blue-400 border-blue-500/30",
+                        "bg-amber-500/10 text-amber-400 border-amber-500/30",
+                        "bg-purple-800/20 text-fuchsia-300 border-purple-500/30",
                         "bg-slate-800 text-slate-400 border-slate-700",
-                        "bg-slate-800 text-slate-400 border-slate-700",
-                        "bg-rose-500/10 text-rose-400 border-rose-500/30"
+                        "bg-rose-500/10 text-rose-400 border-rose-500/30",
+                        "bg-slate-800 text-slate-400 border-slate-700"
                       ];
                       return (
                         <span key={i} className={`px-2 py-1 rounded border text-[10px] sm:text-xs font-bold uppercase ${colorVariants[i]}`}>
@@ -588,6 +592,22 @@ export default function App() {
                         </span>
                       );
                     })}
+                  </div>
+
+                  {/* SNS Links */}
+                  <div className="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4">
+                    <a href="https://www.youtube.com/@zf_kemao" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 border border-slate-700 hover:bg-red-500/20 hover:border-red-500/50 hover:text-red-500 text-slate-400 transition-colors group" title="YouTube">
+                      <Youtube className="w-5 h-5" />
+                    </a>
+                    <a href="https://www.instagram.com/gram8_nori_football/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 border border-slate-700 hover:bg-pink-500/20 hover:border-pink-500/50 hover:text-pink-500 text-slate-400 transition-colors group" title="Instagram">
+                      <Instagram className="w-5 h-5" />
+                    </a>
+                    <a href="https://x.com/yossamaru" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 border border-slate-700 hover:bg-slate-700 hover:border-slate-500 hover:text-white text-slate-400 transition-colors group" title="X (Twitter)">
+                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961H5.078z"/></svg>
+                    </a>
+                    <a href="https://note.com/zf_kemao" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 rounded-full bg-slate-800 border border-slate-700 hover:bg-emerald-500/20 hover:border-emerald-500/50 hover:text-emerald-500 text-slate-400 transition-colors group font-bold font-mono tracking-tighter text-lg" title="note">
+                      n
+                    </a>
                   </div>
                 </motion.div>
               </div>
