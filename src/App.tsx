@@ -67,7 +67,7 @@ export default function App() {
               <a href="#services" className="text-sm font-medium hover:text-white transition-colors">サービス</a>
               <a href="#about" className="text-sm font-medium hover:text-white transition-colors">代表略歴</a>
               <a href="#contact" className={`px-6 py-2.5 rounded-full text-white text-sm font-bold shadow-lg shadow-emerald-900/20 hover:scale-105 transition-transform ${gradients.primary}`}>
-                無料相談・スケジュール確認
+                ご相談・お問い合わせ
               </a>
             </div>
 
@@ -89,7 +89,7 @@ export default function App() {
               <a href="#services" onClick={toggleMenu} className="block px-3 py-3 rounded-md text-base font-medium hover:text-white hover:bg-slate-800 touch-manipulation">実績・サービス</a>
               <a href="#about" onClick={toggleMenu} className="block px-3 py-3 rounded-md text-base font-medium hover:text-white hover:bg-slate-800 touch-manipulation">代表プロフィール</a>
               <a href="#contact" onClick={toggleMenu} className={`mt-4 block text-center px-4 py-4 rounded-xl text-white font-bold touch-manipulation ${gradients.primary}`}>
-                無料相談・スケジュール確認
+                ご相談・お問い合わせ
               </a>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function App() {
                 
                 <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                   <a href="#contact" className={`w-full sm:w-auto px-8 py-5 rounded-xl text-white font-bold text-center text-lg sm:text-xl shadow-lg shadow-purple-900/30 hover:scale-[1.02] transition-transform ${gradients.primary} flex items-center justify-center gap-2 group touch-manipulation`}>
-                    無料相談・スケジュール確認
+                    ご相談・お問い合わせ
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </motion.div>
@@ -439,6 +439,8 @@ export default function App() {
                       毎週土曜21時からYouTubeでサカつく大会のライブ配信を実施。加えて、大会結果用のWebサイトを新たに構築しました。
                       管理者ユーザのログイン制御を組み込み、<strong>ニューストピックの更新</strong>や<strong>大会結果・勝点の集計結果の反映</strong>、<strong>YouTube・noteの投稿カード表示</strong>などの運用をシームレスにDX化しています。
                       <br /><br />
+                      また、大会結果・勝点の集計に関してもDX化を取り入れており、自作ツールでJSONファイル（大会結果）や集計結果（Excel）を自動生成する仕組みも構築しています。
+                      <br /><br />
                       さらに、チームの応援チャントも自作音源で制作。システム・動画・音声すべての体験を一気通貫でプロデュースしています。ぜひ配信でチャントも聴いてみてください。
                     </p>
                     <div className="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20">
@@ -478,6 +480,16 @@ export default function App() {
                   </p>
                 </motion.div>
 
+                {/* Package 1.5 */}
+                <motion.div variants={fadeIn} className="bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-800 relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-slate-800 rounded-bl-full transition-transform group-hover:scale-110"></div>
+                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2 relative z-10">個別スポット制作・システム開発</h4>
+                  <p className="text-slate-400 font-bold text-xs sm:text-sm mb-4 relative z-10 font-mono">Webサイト / LP / PR動画 / イラスト作成 / ツール開発 他</p>
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 relative z-10">
+                    「サイトだけ作りたい」「自社用の業務ツールを開発してほしい」「PR動画やイラスト作成だけお願いしたい」といった、個々の単発制作・開発依頼も柔軟に承っております。用途に合わせて最適なプランをご提案します。
+                  </p>
+                </motion.div>
+
                 {/* Package 2 - Highlighted */}
                 <motion.div variants={fadeIn} className={`rounded-2xl p-[2px] ${gradients.primary} shadow-[0_0_30px_rgba(168,85,247,0.15)]`}>
                   <div className="bg-slate-950 rounded-2xl p-6 sm:p-8 h-full relative">
@@ -490,7 +502,7 @@ export default function App() {
                       単発制作で終わらせず、中長期的なサイト改善、新規LPの継続制作、社内業務のAI/DX化提案まで。あなたの右腕となる「システムを理解したディレクター」を社内に置く超強力なプランです。
                     </p>
                     <a href="#contact" className={`w-full flex items-center justify-center text-center px-6 py-4 sm:py-5 rounded-xl text-white font-bold text-sm sm:text-base ${gradients.primary} hover:opacity-90 transition-all hover:scale-[1.02] shadow-lg touch-manipulation`}>
-                      顧問プランの空き状況を確認する
+                      ご相談・お問い合わせ
                     </a>
                   </div>
                 </motion.div>
@@ -634,7 +646,7 @@ export default function App() {
               
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 tracking-tight mt-2">現在の稼働状況とご依頼</h2>
               
-              <div className="text-slate-300 text-sm sm:text-base leading-relaxed mb-10 max-w-2xl mx-auto space-y-6">
+              <div className="text-left text-slate-300 text-sm sm:text-base leading-relaxed mb-10 max-w-2xl mx-auto space-y-6">
                 <p className="bg-slate-900/50 p-4 rounded-xl border border-slate-700/50">
                   現在、複数の企業様と<strong className="text-white">月額顧問契約（リテーナー）</strong>を進行中のため、同時に伴走できるプロジェクト数を厳格に管理しております。
                 </p>
@@ -650,10 +662,12 @@ export default function App() {
               </div>
 
               <a 
-                href="#contact" 
+                href="https://forms.gle/fmsBesPo2aJ9p5D1A"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`flex items-center justify-center gap-3 w-full sm:w-auto sm:inline-flex px-8 py-5 sm:py-6 rounded-2xl text-white font-black text-lg sm:text-xl shadow-[0_10px_30px_rgba(168,85,247,0.3)] hover:shadow-[0_15px_40px_rgba(168,85,247,0.4)] hover:-translate-y-1 transition-all ${gradients.primary} group touch-manipulation`}
               >
-                無料相談・スケジュール確認
+                ご相談・お問い合わせ
                 <div className="bg-white/20 p-1.5 rounded-full group-hover:translate-x-1 transition-transform">
                   <ArrowRight className="w-5 h-5" />
                 </div>
