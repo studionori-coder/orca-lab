@@ -3,8 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import ReactGA from 'react-ga4';
 import { 
   Zap,
   LayoutTemplate,
@@ -43,6 +44,10 @@ const stagger = {
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
@@ -52,13 +57,17 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             {/* Logo */}
-            <div className="flex-shrink-0 flex items-center gap-3">
-              <img src="/img/logo.png" alt="ORCA LAB Logo" className="w-10 h-10 rounded-lg shadow-lg shadow-purple-500/20 object-cover" />
+            <a 
+              href="#" 
+              onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+              className="flex-shrink-0 flex items-center gap-3 group"
+            >
+              <img src="/img/logo.png" alt="ORCA LAB Logo" className="w-10 h-10 rounded-lg shadow-lg shadow-purple-500/20 object-cover transition-transform group-hover:scale-105" />
               <div>
-                <h1 className="text-2xl font-black tracking-tighter text-white leading-none mt-1">ORCA LAB</h1>
+                <h1 className="text-2xl font-black tracking-tighter text-white leading-none mt-1 transition-colors group-hover:text-emerald-400">ORCA LAB</h1>
                 <p className="text-[10px] text-emerald-400 font-mono tracking-widest uppercase mt-0.5 hidden sm:block">System Architecture & AI Creative</p>
               </div>
-            </div>
+            </a>
 
             {/* Desktop Nav */}
             <div className="hidden lg:flex items-center gap-8">
@@ -67,7 +76,7 @@ export default function App() {
               <a href="#services" className="text-sm font-medium hover:text-white transition-colors">サービス</a>
               <a href="#about" className="text-sm font-medium hover:text-white transition-colors">代表略歴</a>
               <a href="#contact" className={`px-6 py-2.5 rounded-full text-white text-sm font-bold shadow-lg shadow-emerald-900/20 hover:scale-105 transition-transform ${gradients.primary}`}>
-                ご相談・お問い合わせ
+                【無料】ご相談・お問い合わせ
               </a>
             </div>
 
@@ -89,7 +98,7 @@ export default function App() {
               <a href="#services" onClick={toggleMenu} className="block px-3 py-3 rounded-md text-base font-medium hover:text-white hover:bg-slate-800 touch-manipulation">実績・サービス</a>
               <a href="#about" onClick={toggleMenu} className="block px-3 py-3 rounded-md text-base font-medium hover:text-white hover:bg-slate-800 touch-manipulation">代表プロフィール</a>
               <a href="#contact" onClick={toggleMenu} className={`mt-4 block text-center px-4 py-4 rounded-xl text-white font-bold touch-manipulation ${gradients.primary}`}>
-                ご相談・お問い合わせ
+                【無料】ご相談・お問い合わせ
               </a>
             </div>
           </div>
@@ -137,7 +146,7 @@ export default function App() {
                 
                 <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                   <a href="#contact" className={`w-full sm:w-auto px-8 py-5 rounded-xl text-white font-bold text-center text-lg sm:text-xl shadow-lg shadow-purple-900/30 hover:scale-[1.02] transition-transform ${gradients.primary} flex items-center justify-center gap-2 group touch-manipulation`}>
-                    ご相談・お問い合わせ
+                    【無料】ご相談・お問い合わせ
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </motion.div>
@@ -384,7 +393,7 @@ export default function App() {
                            src="https://www.instagram.com/p/DXo1yV6y9cY/embed"
                            frameBorder={0}
                            scrolling="no"
-                           allowTransparency={true}
+                           allowtransparency="true"
                          ></iframe>
                          <div className="mt-4 p-3 text-center bg-slate-800/50 border-t border-slate-800">
                            <span className="text-xs font-bold text-slate-400">PV動画（Instagram Reels）</span>
@@ -502,7 +511,7 @@ export default function App() {
                       単発制作で終わらせず、中長期的なサイト改善、新規LPの継続制作、社内業務のAI/DX化提案まで。あなたの右腕となる「システムを理解したディレクター」を社内に置く超強力なプランです。
                     </p>
                     <a href="#contact" className={`w-full flex items-center justify-center text-center px-6 py-4 sm:py-5 rounded-xl text-white font-bold text-sm sm:text-base ${gradients.primary} hover:opacity-90 transition-all hover:scale-[1.02] shadow-lg touch-manipulation`}>
-                      ご相談・お問い合わせ
+                      【無料】ご相談・お問い合わせ
                     </a>
                   </div>
                 </motion.div>
@@ -661,17 +670,47 @@ export default function App() {
                 </div>
               </div>
 
-              <a 
-                href="https://forms.gle/fmsBesPo2aJ9p5D1A"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`flex items-center justify-center gap-3 w-full sm:w-auto sm:inline-flex px-8 py-5 sm:py-6 rounded-2xl text-white font-black text-lg sm:text-xl shadow-[0_10px_30px_rgba(168,85,247,0.3)] hover:shadow-[0_15px_40px_rgba(168,85,247,0.4)] hover:-translate-y-1 transition-all ${gradients.primary} group touch-manipulation`}
-              >
-                ご相談・お問い合わせ
-                <div className="bg-white/20 p-1.5 rounded-full group-hover:translate-x-1 transition-transform">
-                  <ArrowRight className="w-5 h-5" />
+              <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
+                <a 
+                  href="https://forms.gle/fmsBesPo2aJ9p5D1A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex flex-1 sm:flex-none items-center justify-center gap-3 w-full px-8 py-5 sm:py-6 rounded-2xl text-white font-black text-lg sm:text-lg shadow-[0_10px_30px_rgba(168,85,247,0.2)] hover:shadow-[0_15px_40px_rgba(168,85,247,0.4)] hover:-translate-y-1 transition-all ${gradients.primary} group touch-manipulation`}
+                >
+                  <div className="flex flex-col items-center">
+                    <span>フォームで相談・問い合わせ（無料）</span>
+                    <span className="text-[10px] font-normal opacity-80 mt-0.5">※Googleフォームが開きます</span>
+                  </div>
+                  <div className="bg-white/20 p-1.5 rounded-full group-hover:translate-x-1 transition-transform">
+                    <ArrowRight className="w-5 h-5" />
+                  </div>
+                </a>
+
+                <a 
+                  href="https://line.me/R/ti/p/@vjq8895b"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex flex-1 sm:flex-none items-center justify-center gap-3 w-full px-8 py-5 sm:py-6 rounded-2xl text-white font-black text-lg sm:text-lg shadow-[0_10px_30px_rgba(6,199,85,0.2)] hover:shadow-[0_15px_40px_rgba(6,199,85,0.4)] hover:-translate-y-1 transition-all bg-[#06C755] hover:bg-[#05b34c] group touch-manipulation`}
+                >
+                  <div className="flex flex-col items-center">
+                    <span className="flex items-center gap-2">
+                       <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 3.528 8.937 8.356 9.613.332.072.766.223.88.528.1.282.029.704.013.882-.023.238-.146.882-.146.882-.047.284.227.422.457.302.227-.12 1.258-.727 3.428-2.077 1.206-.75 2.378-1.503 3.32-2.193 4.549-3.32 5.69-6.31 5.69-7.937zm-14.887 2.193h-2.124a.591.591 0 01-.58-.592v-3.791a.59.59 0 01.58-.592h2.124a.59.59 0 01.58.592.59.59 0 01-.58.592h-1.531v.982h1.531a.59.59 0 01.58.592.59.59 0 01-.58.592h-1.531v1.034h1.531a.59.59 0 01.58.592.59.59 0 01-.58.592zm3.626 0h-.58a.59.59 0 01-.58-.592v-3.791a.59.59 0 01.58-.592h.58a.59.59 0 01.58.592v3.791a.59.59 0 01-.58.592zm4.316 0h-2.115a.59.59 0 01-.58-.592v-3.791a.59.59 0 01.58-.592h1.541v.969h-1.541v.44h1.541a.59.59 0 01.58.592.59.59 0 01-.58.592h-1.541v1.178h1.541a.59.59 0 01.58.592.591.591 0 01-.58.592zm4.197-2.616a.59.59 0 01-.482.234h-.002a.59.59 0 01-.488-.242l-1.621-2.222v2.054a.59.59 0 01-.58.592.591.591 0 01-.58-.592v-3.791a.59.59 0 01.58-.592.59.59 0 01.48.232l1.623 2.22 v-2.038a.59.59 0 01.58-.592.59.59 0 01.58.592v3.791a.59.59 0 01-.09.362z"/></svg>
+                       LINEで相談・問い合わせ（無料）
+                    </span>
+                    <span className="text-[10px] font-normal opacity-90 mt-0.5">※公式アカウントを追加</span>
+                  </div>
+                  <div className="bg-white/20 p-1.5 rounded-full group-hover:translate-x-1 transition-transform">
+                    <ArrowRight className="w-5 h-5" />
+                  </div>
+                </a>
+              </div>
+
+              <div className="mt-10 pt-8 border-t border-slate-700/50 flex flex-col items-center">
+                <p className="text-slate-400 text-xs sm:text-sm mb-4 font-bold tracking-wider">PC等からのLINE追加はこちらをスキャン</p>
+                <div className="bg-white p-3 rounded-2xl shadow-lg">
+                  <img src="https://qr-official.line.me/gs/M_vjq8895b_GW.png?oat_content=qr" alt="LINE公式アカウント QRコード" className="w-32 h-32 rounded-lg" />
                 </div>
-              </a>
+              </div>
             </motion.div>
           </div>
         </section>
