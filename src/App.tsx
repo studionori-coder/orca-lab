@@ -127,25 +127,27 @@ export default function App() {
                 
                 <motion.h1 
                   variants={fadeIn}
-                  className="font-black text-white leading-[1.4] sm:leading-[1.2] mb-6 tracking-tight flex flex-col gap-2 sm:gap-4"
+                  className="font-black text-white leading-[1.4] sm:leading-[1.2] mb-6 tracking-tight"
                 >
-                  <span className="whitespace-nowrap text-[min(6.5vw,2rem)] sm:text-5xl lg:text-[4rem] text-white">
-                    岐阜の<span className={`${gradients.text}`}>面白いAI専門家</span>が
+                  <span className="block text-[min(6vw,1.5rem)] sm:text-3xl lg:text-[2.1rem] text-white mb-2 sm:mb-4">
+                    あなたのビジネスの
                   </span>
-                  <span className="whitespace-nowrap text-[min(3vw,1rem)] sm:text-2xl lg:text-[1.8rem] text-slate-400 font-bold mb-2">
-                    プロトタイプまで最短即日。
+                  <span className={`block text-[min(10vw,2.5rem)] sm:text-6xl lg:text-[4.5rem] ${gradients.text} leading-tight mb-2 sm:mb-4 pb-1 sm:pb-3`}>
+                    「デジタル部門」
                   </span>
-                  <span className="whitespace-nowrap text-[min(5vw,1.5rem)] sm:text-4xl lg:text-[2.2rem] text-slate-300">
-                    AI導入支援×クリエイティブで
-                  </span>
-                  <span className="whitespace-nowrap text-[min(5.5vw,1.75rem)] sm:text-4xl lg:text-[3rem] text-slate-200">
-                    ビジネスを<span className={`${gradients.text}`}>爆速で形にする。</span>
+                  <span className="block text-[min(7vw,1.8rem)] sm:text-4xl lg:text-[3rem] text-white">
+                    丸ごと引き受けます。
                   </span>
                 </motion.h1>
                 
-                <motion.p variants={fadeIn} className="text-base sm:text-lg lg:text-xl leading-relaxed text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0">
-                  Web、動画、デザインをすべて一人で完結。システムを止めない現役SEが提供する、やり直し・妥協ゼロの共創型クリエイティブ。単発の外注ではなく、ビジネスを共に前進させる強力なDXパートナーとして機能します。
-                </motion.p>
+                <motion.div variants={fadeIn} className="text-sm sm:text-base lg:text-lg leading-relaxed text-slate-300 mb-10 max-w-2xl mx-auto lg:mx-0 space-y-4">
+                  <p>
+                    イベント企画、WEB更新、SNS動画、チラシ作成——。やるべきことに追われるオーナー様へ。
+                  </p>
+                  <p>
+                    SE歴26年の技術と最新AIを駆使し、複数業者に頼むコストと時間を劇的にカット。一人の専属パートナーとして、あなたの事業に伴走します。
+                  </p>
+                </motion.div>
                 
                 <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                   <a href="#contact" className={`w-full sm:w-auto px-8 py-5 rounded-xl text-white font-bold text-center text-lg sm:text-xl shadow-lg shadow-purple-900/30 hover:scale-[1.02] transition-transform ${gradients.primary} flex items-center justify-center gap-2 group touch-manipulation`}>
@@ -476,49 +478,101 @@ export default function App() {
                 variants={stagger}
                 className="flex flex-col gap-6"
               >
-                 <div className="mb-2 flex items-center gap-3">
+                 <div className="mb-4 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center">
                     <Briefcase className="w-5 h-5 text-purple-400" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">ご提供パッケージ</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">導入ステップとプラン</h3>
                 </div>
 
-                {/* Package 1 */}
-                <motion.div variants={fadeIn} className="bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-800 relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-slate-800 rounded-bl-full transition-transform group-hover:scale-110"></div>
-                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2 relative z-10">イベント特化フルスタック制作</h4>
-                  <p className="text-slate-400 font-bold text-xs sm:text-sm mb-4 relative z-10 font-mono">Webサイト ＋ LP ＋ PR動画 ＋ 広告バナー</p>
-                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 relative z-10">
-                    イベントや事業立ち上げに必要な制作物を、統一ディレクションで一括制作。バラバラの外注を一本化し、圧倒的なスピードで市場に投入します。
-                  </p>
-                </motion.div>
-
-                {/* Package 1.5 */}
-                <motion.div variants={fadeIn} className="bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-800 relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-slate-800 rounded-bl-full transition-transform group-hover:scale-110"></div>
-                  <h4 className="text-lg sm:text-xl font-bold text-white mb-2 relative z-10">個別スポット制作・システム開発</h4>
-                  <p className="text-slate-400 font-bold text-xs sm:text-sm mb-4 relative z-10 font-mono">Webサイト / LP / PR動画 / イラスト作成 / ツール開発 他</p>
-                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 relative z-10">
-                    「サイトだけ作りたい」「自社用の業務ツールを開発してほしい」「PR動画やイラスト作成だけお願いしたい」といった、個々の単発制作・開発依頼も柔軟に承っております。用途に合わせて最適なプランをご提案します。
-                  </p>
-                </motion.div>
-
-                {/* Package 2 - Highlighted */}
-                <motion.div variants={fadeIn} className={`rounded-2xl p-[2px] ${gradients.primary} shadow-[0_0_30px_rgba(168,85,247,0.15)]`}>
-                  <div className="bg-slate-950 rounded-2xl p-6 sm:p-8 h-full relative">
-                    <div className="absolute -top-3 right-6 px-3 py-1 bg-gradient-to-r from-purple-600 to-emerald-500 rounded-full text-white text-[10px] sm:text-xs font-bold tracking-widest uppercase shadow-lg">
-                      Recommended
+                {/* STEP 1 */}
+                <div className="relative">
+                  <div className="absolute top-0 left-6 bottom-0 w-0.5 bg-gradient-to-b from-purple-500/50 to-emerald-500/50 -z-10 hidden sm:block"></div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div className="flex-shrink-0 relative">
+                      <div className="w-12 h-12 rounded-xl bg-slate-900 border-2 border-purple-500 flex flex-col items-center justify-center text-white font-black z-10 mx-auto sm:mx-0 shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+                        <span className="text-[10px] leading-none text-purple-400 mt-1">STEP</span>
+                        <span className="text-xl leading-none">1</span>
+                      </div>
                     </div>
-                    <h4 className="text-lg sm:text-xl font-bold text-white mb-2 mt-2">月額DX顧問・クリエイティブ伴走</h4>
-                    <p className="text-purple-300 font-bold text-xs sm:text-sm mb-4 font-mono">御社の「AI・Web・システム戦略」を丸投げ</p>
-                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
-                      単発制作で終わらせず、中長期的なサイト改善、新規LPの継続制作、社内業務のAI/DX化提案まで。あなたの右腕となる「システムを理解したディレクター」を社内に置く超強力なプランです。
-                    </p>
-                    <a href="#contact" className={`w-full flex items-center justify-center text-center px-6 py-4 sm:py-5 rounded-xl text-white font-bold text-sm sm:text-base ${gradients.primary} hover:opacity-90 transition-all hover:scale-[1.02] shadow-lg touch-manipulation`}>
-                      【無料】ご相談・お問い合わせ
-                    </a>
+                    
+                    <div className="flex-1 w-full space-y-4">
+                      <h4 className="text-lg sm:text-xl font-bold text-white flex flex-wrap items-center gap-2 sm:gap-3">
+                        ベースとなる素材・環境の構築
+                        <span className="px-2 py-1 bg-slate-800 rounded text-[10px] sm:text-xs text-slate-400 font-normal border border-slate-700">単発・初期費用</span>
+                      </h4>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <motion.div variants={fadeIn} className="bg-slate-900 rounded-xl p-5 border border-slate-800 shadow-lg relative overflow-hidden group hover:border-purple-500/50 transition-colors">
+                          <div className="absolute top-0 right-0 w-24 h-24 bg-slate-800 rounded-bl-full transition-transform group-hover:scale-125 opacity-30"></div>
+                          <h5 className="font-bold text-white mb-2 text-sm relative z-10 flex items-center gap-2">
+                            <span className="w-1.5 h-4 bg-purple-500 rounded-full inline-block"></span>
+                            一式請け
+                          </h5>
+                          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed relative z-10">
+                            WEB・動画・デザインのトータルプロデュース。事業立ち上げに必要な制作物を一貫した世界観で作ります。
+                          </p>
+                        </motion.div>
+                        <motion.div variants={fadeIn} className="bg-slate-900 rounded-xl p-5 border border-slate-800 shadow-lg relative overflow-hidden group hover:border-purple-500/50 transition-colors">
+                          <div className="absolute top-0 right-0 w-24 h-24 bg-slate-800 rounded-bl-full transition-transform group-hover:scale-125 opacity-30"></div>
+                          <h5 className="font-bold text-white mb-2 text-sm relative z-10 flex items-center gap-2">
+                            <span className="w-1.5 h-4 bg-purple-500 rounded-full inline-block"></span>
+                            個別請け
+                          </h5>
+                          <p className="text-slate-400 text-xs sm:text-sm leading-relaxed relative z-10">
+                            ポスター1枚から、動画1本からのスモールスタートも歓迎。必要なものを必要なだけスピーディに制作します。
+                          </p>
+                        </motion.div>
+                      </div>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
+
+                {/* STEP 2 */}
+                <div className="relative mt-2 sm:mt-6">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <div className="flex-shrink-0 relative">
+                      <div className="w-12 h-12 rounded-xl bg-slate-900 border-2 border-emerald-500 flex flex-col items-center justify-center text-white font-black z-10 mx-auto sm:mx-0 shadow-[0_0_15px_rgba(52,211,153,0.3)]">
+                        <span className="text-[10px] leading-none text-emerald-400 mt-1">STEP</span>
+                        <span className="text-xl leading-none">2</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1 w-full relative">
+                      <motion.div variants={fadeIn} className={`rounded-2xl p-[2px] ${gradients.primary} shadow-[0_0_30px_rgba(168,85,247,0.15)]`}>
+                        <div className="bg-slate-950 rounded-2xl p-6 sm:p-8 relative">
+                          <div className="absolute -top-3 right-6 px-3 py-1 bg-gradient-to-r from-emerald-600 to-purple-500 rounded-full text-white text-[10px] sm:text-xs font-bold tracking-widest uppercase shadow-lg">
+                            最強の右腕
+                          </div>
+                          
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h4 className="text-lg sm:text-2xl font-bold text-white mb-3 sm:mb-0 mt-2">月額デジタル伴走プラン</h4>
+                            <span className="inline-block px-3 sm:px-4 py-1.5 bg-emerald-900/40 border border-emerald-500/30 rounded-full text-emerald-300 text-sm font-bold shadow-inner">月額 3万円〜</span>
+                          </div>
+                          
+                          <p className="text-purple-300 font-bold text-xs sm:text-sm mb-5 font-mono">作った素材を使い倒す</p>
+                          
+                          <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                            STEP 1で作った素材をベースに、SNS展開やWEB更新、日々のクリエイティブを定額でスピーディに量産・運用します。複数業者に見積もりを取る手間がゼロになります。
+                          </p>
+                          
+                          <div className="bg-slate-900/80 rounded-xl p-4 sm:p-5 border border-slate-700/50 mb-8 border-l-2 border-l-emerald-500">
+                            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed flex items-start gap-2 sm:gap-3">
+                              <span className="font-medium text-slate-400">
+                                <strong className="text-white">【重要】</strong> 本プランは「運用・派生作業のサポート」を定額で行うものです。ゼロからの新規ページ作成、新規デザイン・動画制作などの大きな構築業務は、別途お見積り（STEP 1）となります。
+                              </span>
+                            </p>
+                          </div>
+                          
+                          <a href="#contact" className={`w-full flex items-center justify-center text-center px-6 py-4 sm:py-5 rounded-xl text-white font-bold text-sm sm:text-base ${gradients.primary} hover:opacity-90 transition-all hover:scale-[1.02] shadow-lg touch-manipulation`}>
+                            【無料】ご相談・お問い合わせ
+                          </a>
+                        </div>
+                      </motion.div>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
@@ -696,18 +750,24 @@ export default function App() {
                 <p>
                   クオリティとスピードを絶対に落とさないため、新規のご依頼につきましては、事前にスケジュールをすり合わせの上、最適な着手日をご提案させていただきます。
                 </p>
-                <div className="inline-flex items-start gap-2 bg-emerald-900/10 border border-emerald-500/20 p-4 rounded-xl text-left">
+                <div className="inline-flex items-start gap-2 bg-emerald-900/10 border border-emerald-500/20 p-4 sm:p-5 rounded-xl text-left">
                   <AlertTriangle className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                  <p className="text-emerald-100/90 text-sm">
-                    「事業を本気で前進させたい」「形にならない議論を終わらせたい」と考える経営者様からのご連絡をお待ちしております。
+                  <p className="text-emerald-100/90 text-sm sm:text-base font-medium leading-relaxed">
+                    ※月額の伴走（顧問）サポートをご希望の場合、ビジネスに深くコミットするため、目安として月額<strong className="text-white bg-slate-800 px-1 rounded mx-0.5">3万円〜</strong>のご相談とさせていただいております。
+                    <span className="block mt-2 text-emerald-200/70 font-normal text-xs sm:text-sm">（単発の制作・ご相談もお気軽にお問い合わせください）</span>
                   </p>
                 </div>
               </div>
 
               <div className="text-center mb-8">
-                <p className="text-emerald-300 font-bold text-sm sm:text-base bg-emerald-900/20 inline-block px-4 py-2 rounded-full border border-emerald-500/30">
+                <p className="text-emerald-300 font-bold text-sm sm:text-base bg-emerald-900/20 inline-block px-4 py-2 rounded-full border border-emerald-500/30 mb-4 shadow-[0_0_15px_rgba(52,211,153,0.1)]">
                   「まずはAIの雑談からでも構いません。ホッホッホ…」
                 </p>
+                <div className="flex justify-center">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-500/20 text-purple-300 text-sm sm:text-base font-bold rounded-lg border border-purple-500/30">
+                    <CheckCircle2 className="w-4 h-4" /> 初回オンライン相談無料
+                  </span>
+                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
