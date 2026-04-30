@@ -19,7 +19,8 @@ import {
   MonitorPlay,
   Briefcase,
   Infinity,
-  Award
+  Award,
+  ExternalLink
 } from 'lucide-react';
 
 const gradients = {
@@ -405,6 +406,46 @@ export default function App() {
                            </div>
                          </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Sakatsuku Project Case */}
+              <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                className="mt-12"
+              >
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center">
+                    <MonitorPlay className="w-5 h-5 text-emerald-400" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">成功事例：サカつく大会配信 ＆ 結果共有システム</h3>
+                </div>
+                <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                  <div className="p-6 sm:p-8">
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      <span className="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold">YouTube配信</span>
+                      <span className="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold">システム構築</span>
+                      <span className="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold">大会DX化</span>
+                    </div>
+                    <h4 className="text-white text-xl sm:text-2xl font-black mb-4">YouTube配信とシステムによる大会運営DX</h4>
+                    <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                      毎週土曜21時からYouTubeでサカつく大会のライブ配信を実施。加えて、大会結果用のWebサイトを新たに構築しました。
+                      管理者ユーザのログイン制御を組み込み、<strong>ニューストピックの更新</strong>や<strong>大会結果・勝点の集計結果の反映</strong>、<strong>YouTube・noteの投稿カード表示</strong>などの運用をシームレスにDX化しています。
+                      <br /><br />
+                      さらに、チームの応援チャントも自作音源で制作。システム・動画・音声すべての体験を一気通貫でプロデュースしています。ぜひ配信でチャントも聴いてみてください。
+                    </p>
+                    <div className="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20">
+                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-bold flex gap-3 items-center">
+                        <span className="text-emerald-400 shrink-0 uppercase text-xs tracking-wider mt-0.5">Live Project:</span>
+                        <a href="https://orca-lab-official.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white border-b border-purple-400/50 hover:text-purple-300 transition-colors flex items-center gap-1.5 pb-0.5">
+                          大会結果用Webサイトを開く <ExternalLink className="w-4 h-4 ml-0.5" />
+                        </a>
+                      </p>
                     </div>
                   </div>
                 </div>
