@@ -470,6 +470,46 @@ export default function App() {
                 </div>
               </motion.div>
 
+              {/* Happy Home Project Case */}
+              <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeIn}
+                className="mt-12 lg:mt-0"
+              >
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center">
+                    <MonitorPlay className="w-5 h-5 text-emerald-400" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">成功事例：工務店・不動産のWeb制作</h3>
+                </div>
+                <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                  <div className="p-6 sm:p-8">
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      <span className="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold">Web制作</span>
+                      <span className="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold">コーポレートサイト</span>
+                      <span className="px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-xs font-bold">不動産・工務店</span>
+                    </div>
+                    <h4 className="text-white text-xl sm:text-2xl font-black mb-4">信頼と実績を伝えるモダンなコーポレートサイト</h4>
+                    <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                      地域密着型でリフォームや不動産業を展開する企業の新規コーポレートサイトを制作しました。
+                      初めてのお客様にも安心感を与えるため、クリーンで温かみのあるデザインを採用。物件情報や施工事例など、目的のコンテンツへ直感的にアクセスできる導線設計をご提案・実装しました。
+                      <br /><br />
+                      名刺代わりとなるペライチ（シングルページ）構成を採用。必要な情報を1ページにシンプルにまとめつつ、サービスの魅力が伝わる洗練されたデザインで、ビジネスの成長をデジタルの側面から強力にサポートしています。
+                    </p>
+                    <div className="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20">
+                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-bold flex gap-3 items-center">
+                        <span className="text-emerald-400 shrink-0 uppercase text-xs tracking-wider mt-0.5">Live Project:</span>
+                        <a href="https://happyhome-official.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white border-b border-purple-400/50 hover:text-purple-300 transition-colors flex items-center gap-1.5 pb-0.5">
+                          Webサイトを開く <ExternalLink className="w-4 h-4 ml-0.5" />
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
               {/* Packages */}
               <motion.div 
                 initial="hidden"
