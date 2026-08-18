@@ -62,7 +62,7 @@ export default function App() {
               onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
               className="flex-shrink-0 flex items-center gap-3 group"
             >
-              <img src="/img/logo.png" alt="ORCA LAB Logo" className="w-10 h-10 rounded-lg shadow-lg shadow-purple-500/20 object-cover transition-transform group-hover:scale-105" />
+              <img src="/img/logo.png" alt="ORCA LAB ロゴ - 中小企業向け伴走型デジタルパートナー" className="w-10 h-10 rounded-lg shadow-lg shadow-purple-500/20 object-cover transition-transform group-hover:scale-105" />
               <div>
                 <h1 className="text-2xl font-black tracking-tighter text-white leading-none mt-1 transition-colors group-hover:text-emerald-400">ORCA LAB</h1>
                 <p className="text-[10px] text-emerald-400 font-mono tracking-widest uppercase mt-0.5 hidden sm:block">System Architecture & AI Creative</p>
@@ -168,7 +168,7 @@ export default function App() {
                   <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-emerald-500/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-700 z-10 rounded-3xl pointer-events-none"></div>
                   <img 
                     src="/img/hero.png" 
-                    alt="ORCA LAB Hero Image" 
+                    alt="ORCA LAB - Web制作・動画制作・DTPデザインを一気通貫で提供する伴走型デジタルパートナー" 
                     className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700" 
                   />
                 </div>
@@ -410,7 +410,7 @@ export default function App() {
                       <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg relative h-[520px] group">
                          <img 
                             src="/img/poster.png" 
-                            alt="ポスター制作事例" 
+                            alt="ORCA LAB制作事例 - ネイルコンテスト用ポスター・DTPデザイン" 
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=600&h=800'; }}
                          />
@@ -663,7 +663,7 @@ export default function App() {
                   <div className="w-full h-full rounded-[2rem] bg-slate-800 flex items-center justify-center overflow-hidden border border-slate-700 relative z-10">
                     <img 
                       src="/img/profile.png" 
-                      alt="Shachinori" 
+                      alt="シャチノリ - ORCA LAB代表 SE歴26年のシステムエンジニア兼AI専門家" 
                       className="w-full h-full object-cover hover:scale-105 transition-all duration-700" 
                     />
                   </div>
