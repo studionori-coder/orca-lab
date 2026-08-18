@@ -64,7 +64,7 @@ export default function App() {
             >
               <img src="/img/logo.png" alt="ORCA LAB ロゴ - 中小企業向け伴走型デジタルパートナー" className="w-10 h-10 rounded-lg shadow-lg shadow-purple-500/20 object-cover transition-transform group-hover:scale-105" />
               <div>
-                <h1 className="text-2xl font-black tracking-tighter text-white leading-none mt-1 transition-colors group-hover:text-emerald-400">ORCA LAB</h1>
+                <span className="text-2xl font-black tracking-tighter text-white leading-none mt-1 transition-colors group-hover:text-emerald-400 block">ORCA LAB</span>
                 <p className="text-[10px] text-emerald-400 font-mono tracking-widest uppercase mt-0.5 hidden sm:block">System Architecture & AI Creative</p>
               </div>
             </a>
@@ -145,7 +145,7 @@ export default function App() {
                     イベント企画、WEB更新、SNS動画、チラシ作成——。やるべきことに追われるオーナー様へ。
                   </p>
                   <p>
-                    SE歴26年の技術と最新AIを駆使し、複数業者に頼むコストと時間を劇的にカット。一人の専属パートナーとして、あなたの事業に伴走します。
+                    SE歴26年の技術と最新AIを駆使し、複数業者に頼むコストと時間を劇的にカット。岐阜・各務原・名古屋を中心に、ホームページ制作から動画・チラシまで一人の専属パートナーとしてあなたの事業に伴走します。
                   </p>
                 </motion.div>
                 
@@ -678,7 +678,7 @@ export default function App() {
                 >
                   <h3 className="text-3xl sm:text-4xl font-black text-white mb-2 tracking-tight">シャチノリ</h3>
                   <h2 className="inline-block px-3 py-1 bg-slate-800 rounded-md text-emerald-400 font-bold mb-6 text-sm tracking-wide">
-                    IT解説が分かりやすい40代エンジニア / 面白いAI専門家
+                    IT解説が分かりやすい40代フリーランスエンジニア / 面白いAI専門家
                   </h2>
 
                   <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
@@ -918,6 +918,7 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-slate-950 py-8 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs sm:text-sm text-slate-400 mb-4">ORCA LAB — 岐阜・各務原・名古屋を中心としたホームページ制作・動画制作・チラシデザイン・DX支援の伴走型デジタルパートナー</p>
           <div className="flex flex-col md:flex-row justify-between items-center text-[10px] sm:text-xs text-slate-500 font-mono gap-4">
             <p>&copy; {new Date().getFullYear()} ORCA LAB BY SHACHINORI. BUILT WITH AI & AGILE SPIRIT.</p>
             <div className="flex gap-4 sm:gap-6 uppercase">
