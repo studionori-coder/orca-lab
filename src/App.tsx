@@ -377,10 +377,18 @@ export default function App() {
                       ORCA LABではコンセプト設計からすべてのクリエイティブを一気通貫で担当し、圧倒的なスピードで形にします。
                       この統合アプローチにより、クライアントの社内業務において<strong>90%の工数削減</strong>を達成。さらに高品質なクリエイティブの力で<strong>単価10万円アップ</strong>を実現させています。
                     </p>
-                    <div className="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20">
+                    <div className="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20 mb-4">
                       <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-bold flex gap-3">
                         <span className="text-emerald-400 shrink-0 uppercase text-xs tracking-wider mt-0.5">Success Story:</span>
                         <span>クライアントの絶大な信頼を獲得し、現在は<span className="text-white border-b border-purple-400/50">「月額顧問」</span>として長期伴走中。</span>
+                      </p>
+                    </div>
+                    <div className="bg-purple-900/10 p-4 rounded-xl border border-purple-500/20">
+                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-bold flex gap-3 items-center">
+                        <span className="text-emerald-400 shrink-0 uppercase text-xs tracking-wider mt-0.5">Live Project:</span>
+                        <a href="https://awa-asia-world-award-2026.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white border-b border-purple-400/50 hover:text-purple-300 transition-colors flex items-center gap-1.5 pb-0.5">
+                          AWAネイルコンテスト公式サイトを開く <ExternalLink className="w-4 h-4 ml-0.5" />
+                        </a>
                       </p>
                     </div>
                   </div>
