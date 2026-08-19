@@ -772,7 +772,57 @@ export default function App() {
           </div>
         </section>
 
-        {/* 6. Contact / Schedule Notice */}
+        {/* 6. FAQ Section */}
+        <section id="faq" className="py-20 lg:py-24 bg-slate-950 border-t border-slate-800 relative overflow-hidden">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+          
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-2 mb-10 sm:mb-12">
+              <div className="hidden sm:block w-1.5 h-8 bg-emerald-500"></div>
+              <div>
+                <h2 className="text-sm font-bold uppercase tracking-widest text-emerald-400 mb-1 font-mono">Frequently Asked Questions</h2>
+                <p className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-none text-center sm:text-left">よくある質問</p>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              {[
+                {
+                  q: "Web制作から動画、チラシまで本当に一人で対応できるのですか？",
+                  a: "はい、可能です。AI×マルチモーダルなアプローチを駆使し、全媒体の世界観を統一して一人で一貫ディレクション・制作を行います。これによりコミュニケーションコストを省き、ブランドのブレをなくします。"
+                },
+                {
+                  q: "プロトタイプの即日提示とは具体的にどのようなものですか？",
+                  a: "「出来上がるまで全貌が見えない」という不安を払拭するため、ヒアリング後すぐにAIを活用して全体の枠組みや世界観を可視化したプロトタイプをご提示し、実機で動く形を見ながらアジャイルに修正を重ねます。"
+                },
+                {
+                  q: "月額デジタル伴走プランには何が含まれますか？",
+                  a: "制作した素材をベースにしたSNS展開やWEB更新、日々のクリエイティブ制作などの「運用・派生作業」の定額サポートが含まれます。新規の大規模な構築は別途お見積り（STEP 1）となります。"
+                }
+              ].map((faq, idx) => (
+                <motion.div 
+                  key={idx}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeIn}
+                  className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-lg hover:border-emerald-500/30 transition-colors"
+                >
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-4 flex items-start gap-3">
+                    <span className="text-emerald-400 font-black shrink-0">Q.</span>
+                    {faq.q}
+                  </h3>
+                  <div className="text-slate-300 text-sm sm:text-base leading-relaxed flex items-start gap-3 pl-1 sm:pl-0">
+                    <span className="text-slate-500 font-black shrink-0">A.</span>
+                    <p>{faq.a}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 7. Contact / Schedule Notice */}
         <section id="contact" className="py-20 lg:py-24 bg-slate-900 border-t border-slate-800 relative overflow-hidden">
            {/* Cyber Grid Background */}
            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#34D399 1px, transparent 1px), linear-gradient(90deg, #34D399 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
